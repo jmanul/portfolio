@@ -26,6 +26,44 @@
      box-sizing: border-box;
      vertical-align: baseline;
    }
+
+   h2 span {
+    place-content: center;
+    display: grid;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 16px;
+    font-family: var(--tipo-principal);
+    font-size: 150px;
+    letter-spacing: -.09em;
+    color: var(--blanco);
+    display: block;
+    line-height:1;
+    padding: 0 12px 12px;
+    position: relative;
+   }
+   span::before {
+
+    background: linear-gradient(270deg , var(--start-color), var(--end-color));
+    content: var(--content);
+    position: absolute;
+    inset: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated 9s infinite;
+    animation-delay: var(--delay);
+   }
+
+   @keyframes animated {
+
+     0%, 30% , 100% {
+      opacity: 1;
+     }
+     60%, 90% {
+      opacity: 0;
+     }
+    }
+    
    img , figure{
      max-width: 100%;
      width: 100%;
